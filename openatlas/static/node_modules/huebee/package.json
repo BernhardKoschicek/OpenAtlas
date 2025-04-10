@@ -1,0 +1,47 @@
+{
+  "name": "huebee",
+  "version": "2.1.1",
+  "description": "1-click color picker",
+  "main": "huebee.js",
+  "scripts": {
+    "test": "npm run lint && node test/",
+    "lint": "npx eslint . && node bin/lint-json.js",
+    "lintFix": "npx eslint . --fix",
+    "dist": "rm -rf dist/ && mkdir -p dist && npm run bundle && npm run uglify && cp huebee.css dist/huebee.css",
+    "bundle": "node bin/bundle.js",
+    "uglify": "npx uglifyjs dist/huebee.pkgd.js -o dist/huebee.pkgd.min.js --mangle --comments /^!/",
+    "version": "node bin/version && npm run dist && git add -A . dist"
+  },
+  "dependencies": {
+    "ev-emitter": "^1.1.1",
+    "unipointer": "^2.3.0"
+  },
+  "devDependencies": {
+    "clean-css": "^4.2.3",
+    "eslint": "^7.0.0",
+    "eslint-plugin-metafizzy": "^1.2.1",
+    "jshint": "^2.11.0",
+    "m.test": "0.0.58",
+    "puppeteer": "^2.1.1",
+    "uglify-js": "^3.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metafizzy/huebee.git"
+  },
+  "keywords": [
+    "color",
+    "picker",
+    "ui",
+    "dom"
+  ],
+  "author": "David DeSandro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metafizzy/huebee/issues"
+  },
+  "homepage": "https://huebee.buzz",
+  "directories": {
+    "test": "test"
+  }
+}

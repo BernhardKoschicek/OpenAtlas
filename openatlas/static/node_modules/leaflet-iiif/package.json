@@ -1,0 +1,41 @@
+{
+  "name": "leaflet-iiif",
+  "version": "3.0.0",
+  "description": "A Leaflet plugin for viewing IIIF sources",
+  "main": "leaflet-iiif.js",
+  "directories": {
+    "example": "examples"
+  },
+  "files": [
+    "leaflet-iiif.js"
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/karma start ./spec/karma.conf.js",
+    "start": "./node_modules/.bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mejackreed/Leaflet-IIIF.git"
+  },
+  "keywords": [
+    "Leaflet",
+    "IIIF",
+    "map",
+    "zoom"
+  ],
+  "author": "Jack Reed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mejackreed/Leaflet-IIIF/issues"
+  },
+  "homepage": "https://github.com/mejackreed/Leaflet-IIIF",
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "jasmine": "^2.5",
+    "karma": "^1.3",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^1.0",
+    "leaflet": "^1.0",
+    "puppeteer": "^1.20.0"
+  }
+}
